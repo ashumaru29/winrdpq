@@ -1,0 +1,17 @@
+name: Windows CRD
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch name if needed
+
+jobs:
+  build:
+    runs-on: windows-latest  # Specifies that the workflow should run on a Windows runner
+
+    steps:
+      - name: Set up Chrome Remote Desktop
+        run: |
+          # Add the necessary commands here to set up Chrome Remote Desktop using PowerShell
+
+      # Additional steps can be added if needed
