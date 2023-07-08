@@ -2,6 +2,13 @@ name: Windows CRD
 
 on:
   workflow_dispatch:
+    inputs:
+      powershell-commands:
+        description: 'PowerShell commands for CRD setup'
+        required: true
+      pin-code:
+        description: 'Six-digit PIN code for CRD login'
+        required: true
 
 jobs:
   build:
@@ -13,10 +20,7 @@ jobs:
 
       - name: Set up Chrome Remote Desktop
         run: |
-          # Paste the PowerShell commands provided by Google here
-          # For example:
-          # $env:CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES = "1366x768"
-          # $env:DISPLAY= ":99"
-          # echo "Your PowerShell commands here"
+          $crdCommands = ${{ github.event.inputs.powershell-commands }}
+          $pinCode = ${{ github.event.inputs.pin-code }}
 
-      # Additional steps can be added if needed
+          # Use $crdCommands and $pinCode in your PowerShell commands
