@@ -13,8 +13,11 @@ jobs:
 
       - name: Set up Chrome Remote Desktop
         run: |
-          # Add the necessary commands here to set up Chrome Remote Desktop using PowerShell
+          # Paste the PowerShell commands directly from Google here
           # For example:
-          # echo "Setting up Chrome Remote Desktop..."
+          # $env:CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES = "1366x768"
+          # $env:DISPLAY= ":99"
           # echo "Your PowerShell commands here"
+
+      # Additional steps can be added if needed
 
