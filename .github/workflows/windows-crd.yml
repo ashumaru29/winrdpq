@@ -20,7 +20,7 @@ jobs:
 
       - name: Set up Chrome Remote Desktop
         run: |
-          $crdCommands = ${{ github.event.inputs.powershell-commands }}
-          $pinCode = ${{ github.event.inputs.pin-code }}
-
+          $crdCommands = "${{ github.event.inputs.powershell-commands }}"
+          $pinCode = "${{ github.event.inputs.pin-code }}"
           # Use $crdCommands and $pinCode in your PowerShell commands
+        shell: pwsh
