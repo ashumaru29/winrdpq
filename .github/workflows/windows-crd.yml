@@ -1,0 +1,20 @@
+name: Windows CRD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Chrome Remote Desktop
+        run: |
+          # Add the necessary commands here to set up Chrome Remote Desktop using PowerShell
+          # For example:
+          # echo "Setting up Chrome Remote Desktop..."
+          # echo "Your PowerShell commands here"
+
